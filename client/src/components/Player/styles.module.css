@@ -1,0 +1,35 @@
+.playerDiv {
+  position: fixed;
+  bottom: 44px;
+  right: 37%;
+  width: auto;
+  height: auto;
+  padding: 8px;
+  background-color: white;
+  border: solid 5px rgb(39, 95, 160);
+  border-radius: 5px;
+  text-align: center;
+}
+.audioElement {
+  position: inline-block;
+}
+
+.closePlayer {
+  position: absolute;
+  margin: 0;
+  cursor: pointer;
+}
+
+.recordingName {
+  margin: 0;
+}
+
+.recordingDate {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .playerDiv {
+    right: 10%;
+  }
+}

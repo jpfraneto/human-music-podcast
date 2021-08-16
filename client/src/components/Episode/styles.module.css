@@ -1,0 +1,29 @@
+.audioPlayerContainer {
+  color: white;
+  border: solid white 2px;
+  display: inline-block;
+  padding: 8px;
+}
+
+.audioPlayerContainer audio {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.outsideDiv {
+  width: 200px;
+  height: 20px;
+  background-color: white;
+  margin: 20px 0;
+  border-radius: 2%;
+}
+
+.innerDiv {
+  height: 20px;
+  background-color: crimson;
+}

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
+
+.main {
+  border: white 5px solid;
+  background-color: rgb(39, 95, 160);
+  padding: 8px;
+  width: 44%;
+  border-radius: 8px;
+  box-shadow: 2px 2px rgb(39, 95, 160);
+}
+
+.formstyle {
+  text-align: left;
+}
+
+.formelement {
+  border: black 1px dashed;
+  padding: 3px 0;
+  margin: 3px 0;
+}
+
+.btn {
+  font-size: 22px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.submitBtn {
+  background-color: rgb(56, 196, 28);
+}
+
+.backBtn {
+  background-color: rgb(50, 125, 205);
+}
+
+.submitBtn:hover {
+  background-color: rgb(30, 106, 15);
+}
+
+.backBtn:hover {
+  background-color: rgb(23, 57, 94);
+}
+
+.invitation {
+  color: black;
+  font-size: 1.618em;
+  font-weight: bold;
+  font-family: 'EB Garamond', serif;
+}
+
+.disclaimer {
+  font-size: 0.5em;
+}
+
+.repeated {
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 88%;
+    font-size: 0.7em;
+  }
+}

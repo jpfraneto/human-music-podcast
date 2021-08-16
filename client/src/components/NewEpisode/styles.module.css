@@ -1,0 +1,13 @@
+.main {
+  color: white;
+}
+
+.formstyle {
+  background-color: blueviolet;
+}
+
+.formelement {
+  border: black 1px dashed;
+  padding: 3px 0;
+  margin: 3px 0;
+}
