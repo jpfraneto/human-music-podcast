@@ -35,7 +35,7 @@ export const Episodes = () => {
                   }}
                   key={index}
                 >
-                  {ep.guestName}
+                  🐚
                 </li>
               ))}
           </ul>

@@ -3,6 +3,7 @@ export * from './Button';
 export * from './Recorder';
 export * from './UploadFile';
 export * from './Player';
+export * from './Player2';
 export * from './Landing';
 export * from './Microphone';
 export * from './Recordings';
