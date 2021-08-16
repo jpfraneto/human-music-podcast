@@ -7,16 +7,9 @@ var cron = require('node-cron');
 const path = require('path');
 
 connectDB();
-
 //El setup en el que funciona es 'minutos horas * * dia', con los parámetros del reloj de mi computador
-cron.schedule('15 15 * * 3', () => {
-  console.log('ejecutado a las 15:15');
-  functions.getRandomGuest();
-});
-
-cron.schedule('15 20 * * 3', () => {
-  console.log('ejecutado a las 20:15');
-  functions.getRandomGuest();
+cron.schedule('08 08 * * *', () => {
+  functions.changePresentAlbum();
 });
 
 app.use(express.json({ limit: '50mb' }));

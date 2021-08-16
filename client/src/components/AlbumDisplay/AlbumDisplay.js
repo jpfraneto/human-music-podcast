@@ -1,9 +1,24 @@
-import { NewAlbum } from 'components/NewAlbum';
-import React, { useState } from 'react';
+import { NewAlbum, Spinner } from 'components';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import axios from 'axios';
 
 export const AlbumDisplay = () => {
   const [displayNewAlbum, setDisplayNewAlbum] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [album, setAlbum] = useState({
+    albumImageUrl:
+      'https://img.discogs.com/UOkoRRp9hPwM-1p1-XpLJIRvPJY=/fit-in/600x604/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-391322-1590457007-2317.jpeg.jpg',
+    albumName: 'Pink Floyd - Animals [1977]',
+    guestName: 'JP Franetovic',
+  });
+  useEffect(() => {
+    const getPresentAlbum = async () => {
+      const res = await axios.get('/api/guests/present');
+      setAlbum({ ...res.data });
+    };
+    getPresentAlbum();
+  }, []);
   const toggleNewAlbum = e => {
     if (!displayNewAlbum)
       e.target.style.backgroundColor = 'rgb(174, 122, 223)';
@@ -17,17 +32,14 @@ export const AlbumDisplay = () => {
       <div className={styles.albumOfTheDay}>
         {!displayNewAlbum ? (
           <div className={styles.albumDiv}>
-            <img
-              className={styles.albumImage}
-              src="https://img.discogs.com/9ZSexElNruM-n8meGhXWuP7ehJs=/fit-in/600x553/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-13001210-1546205820-4603.jpeg.jpg"
-            />
+            <img className={styles.albumImage} src={album.albumImageUrl} />
             <figcaption className={styles.todayDate}>
               {today.toUTCString().slice(0, -13)}
             </figcaption>
             <h3>
-              <strong>Yaima - Meditations [1999]</strong>
+              <strong>{album.albumName} </strong>
             </h3>
-            <small>Jorge Pablo Franetovic</small>
+            <small>{album.guestName} </small>
           </div>
         ) : (
           <NewAlbum setDisplayNewAlbum={setDisplayNewAlbum} />
@@ -39,7 +51,7 @@ export const AlbumDisplay = () => {
         }}
         className={styles.newAlbum}
       >
-        Add Album Of The Day*
+        {!displayNewAlbum ? 'Add Album Of The Day*' : 'Thank you'}
       </button>
       <br />
       {displayNewAlbum && (

@@ -16,9 +16,8 @@ const GuestSchema = new mongoose.Schema({
   albumImageUrl: {
     type: String,
   },
-  albumOfTheDay: {
-    type: Boolean,
-    default: false,
+  albumOfTheDayStatus: {
+    type: String,
   },
   albumOfTheDayDate: {
     type: Date,

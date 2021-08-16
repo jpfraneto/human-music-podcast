@@ -12,6 +12,7 @@ router.post('/', async (req, res) => {
       guestName,
       email,
     });
+    newGuest.albumOfTheDayStatus = 'future';
     await newGuest.save();
     res.json({
       msg: 'Your information was saved. One day you will be in the podcast and we will have a great conversation. Thanks for trusting this space',
@@ -28,6 +29,25 @@ router.get('/virgins', async (req, res) => {
     res.json(guests);
   } catch (err) {
     console.log(err);
+  }
+});
+
+router.get('/present', async (req, res) => {
+  try {
+    const presentAlbum = await Guest.findOne({
+      albumOfTheDayStatus: 'present',
+    });
+    console.log('the presentAlbum is: ', presentAlbum);
+    const { albumImageUrl, albumName, guestName } = presentAlbum;
+    const data = {
+      albumImageUrl,
+      albumName,
+      guestName,
+    };
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500);
   }
 });
 

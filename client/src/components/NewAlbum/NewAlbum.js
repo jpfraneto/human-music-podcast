@@ -125,7 +125,7 @@ export const NewAlbum = ({ setDisplayNewAlbum }) => {
               <small> Email</small>
             </div>
             <button className={styles.submitBtn} type="submit">
-              Submit
+              Add New Album
             </button>
           </form>
         </div>

@@ -14,21 +14,26 @@ functions.getRandomGuest = async () => {
   functions.sendInvitationToRandomGuest(randomGuest);
 };
 
-functions.sendInvitationToRandomGuest = randomGuest => {
-  const data = {
-    from: 'welcome@hmp.org',
-    to: randomGuest.email,
-    subject: 'Welcome to the Human Music Podcast',
-    html:
-      `<h3>Hello ${randomGuest.name}!Thank you for trusting in me.</h3><br/> <p> This is an automated message. In order to keep things random I had to do it like this. You are the only person that has gotten this email.</p> <br/><p>If you don't want to participate, please click the following link so that a new guest can be invited <a href='` +
-      'http://www.human-music.com' +
-      "'><span>click here</span></a>.</p><br/><p></p>",
-  };
-  mg.messages().send(data, function (error, body) {
-    console.log(
-      `The email was sent to ${randomGuest.email}, the body of the callback is: ${body}`,
-    );
+functions.changePresentAlbum = async () => {
+  const presentAlbum = await Guest.find({
+    albumOfTheDayStatus: 'present',
   });
+  presentAlbum.albumOfTheDayStatus = 'past';
+  await presentAlbum.save();
+  console.log(`The album ${presentAlbum.albumName} was sent to the past`);
+  functions.presentizeRandomAlbum();
+};
+
+functions.presentizeRandomAlbum = async () => {
+  const futureAlbums = await Guest.find({ albumOfTheDayStatus: 'future' });
+  const randomIndex = Math.floor(Math.random() * futureAlbums.length);
+  const nextAlbum = futureAlbums[randomIndex];
+  nextAlbum.albumOfTheDayDate = new Date();
+  nextAlbum.albumOfTheDayStatus = 'present';
+  await nextAlbum.save();
+  console.log(
+    `The album ${nextAlbum.albumName} was brought to the present`,
+  );
 };
 
 module.exports = functions;

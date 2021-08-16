@@ -45,7 +45,7 @@ export const Navbar = () => {
             );
           }}
         >
-          Human-Music
+          Radio
         </li>
       </ul>
     </div>

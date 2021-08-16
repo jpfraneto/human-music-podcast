@@ -43,3 +43,10 @@
 .serverResponseSpan {
   margin-top: 12px;
 }
+
+.submitBtn {
+  font-weight: bold;
+  border: solid black 2px;
+  margin-left: 51px;
+  cursor: pointer;
+}
