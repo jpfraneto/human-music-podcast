@@ -26,8 +26,8 @@ export const App = () => {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/recordings" component={Recordings} />
-          <Route exact path="/episodesworld" component={EpisodesWorld} />
-          <Route exact path="/episodes" component={Episodes} />
+          <Route exact path="/episodesworld" component={Episodes} />
+          <Route exact path="/episodes" component={EpisodesWorld} />
           <Route exact path="/episodes/new" component={NewEpisode} />
           <Route exact path="/about" component={About} />
           <Route exact path="/invitation" component={Invitation} />
