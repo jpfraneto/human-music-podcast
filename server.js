@@ -6,9 +6,18 @@ const functions = require('./utils/functions');
 var cron = require('node-cron');
 const path = require('path');
 
+if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`);
+    else next();
+  });
+}
+
 connectDB();
 //El setup en el que funciona es 'minutos horas * * dia', con los parámetros del reloj de mi computador
-cron.schedule('08 08 * * *', () => {
+cron.schedule('22 12 * * *', () => {
+  console.log('inside the cron job at 12:22!');
   functions.changePresentAlbum();
 });
 
