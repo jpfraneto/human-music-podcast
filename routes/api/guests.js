@@ -25,7 +25,6 @@ router.post('/', async (req, res) => {
 router.get('/virgins', async (req, res) => {
   try {
     const guests = await Guest.find({ interviewed: false });
-    console.log('The guests that are present in the db are:', guests);
     res.json(guests);
   } catch (err) {
     console.log(err);
@@ -37,7 +36,6 @@ router.get('/present', async (req, res) => {
     const presentAlbum = await Guest.findOne({
       albumOfTheDayStatus: 'present',
     });
-    console.log('the presentAlbum is: ', presentAlbum);
     const { albumImageUrl, albumName, guestName } = presentAlbum;
     const data = {
       albumImageUrl,

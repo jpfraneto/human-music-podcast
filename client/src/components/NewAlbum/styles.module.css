@@ -86,6 +86,12 @@
   text-align: left;
   display: inline-block;
   margin: 0 auto;
+  width: 88%;
+  position: relative;
+}
+
+.newAlbumForm input {
+  width: 66%;
 }
 
 .innerDiv {
@@ -100,6 +106,10 @@
 .submitBtn {
   font-weight: bold;
   border: solid black 2px;
-  margin-left: 51px;
   cursor: pointer;
+  background-color: rgb(106, 104, 104);
+  color: white;
+  margin-top: 1px;
+  position: absolute;
+  left: 50%;
 }
