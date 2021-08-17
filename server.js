@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production') {
 
 connectDB();
 //El setup en el que funciona es 'minutos horas * * dia', con los parámetros del reloj de mi computador
-cron.schedule('27 12 * * *', () => {
+cron.schedule('35 12 * * *', () => {
   console.log('inside the cron job at 12:22!');
   functions.changePresentAlbum();
 });

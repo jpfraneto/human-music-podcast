@@ -42,9 +42,6 @@ export const Episodes = () => {
           {chosenEpisode && <Episode episode={chosenEpisode} />}
           <hr />
           <EpisodePlayer />
-          {/* {displayNewGuest && (
-            <NewGuest setDisplayNewGuest={setDisplayNewGuest} />
-          )} */}
         </div>
       )}
     </div>
