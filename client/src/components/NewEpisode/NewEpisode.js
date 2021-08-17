@@ -8,6 +8,7 @@ export const NewEpisode = () => {
   const [data, setData] = useState({
     audioFileUrl: '',
     guestCountry: '',
+    guestImageUrl: '',
     guestName: '',
     dateRecorded: '',
     language: 'Spanish',
@@ -76,6 +77,17 @@ export const NewEpisode = () => {
             <div className={styles.formelement}>
               <input
                 onChange={e => onChange(e)}
+                name="guestImageUrl"
+                type="text"
+                value={data.guestImageUrl}
+                placeholder="guestImageUrl"
+                required
+              />
+              <small> Url of the Guest Image</small>
+            </div>
+            <div className={styles.formelement}>
+              <input
+                onChange={e => onChange(e)}
                 name="guestCountry"
                 type="text"
                 value={data.guestCountry}
@@ -132,6 +144,9 @@ export const NewEpisode = () => {
             </div>
             <input type="submit" value="Submit" />
           </form>
+          {data.guestImageUrl && (
+            <img src={data.guestImageUrl} className={styles.guestImage} />
+          )}
         </div>
       )}
     </div>

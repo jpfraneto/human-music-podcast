@@ -69,5 +69,14 @@
 
 h3 {
   padding: 0px;
-  margin: 8px 0;
+  margin: 13px 0 0 0;
+}
+
+.albumTitle {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+.guestNameStyle {
+  font-size: 0.8vw;
 }

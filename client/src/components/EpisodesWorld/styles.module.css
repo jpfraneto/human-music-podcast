@@ -15,20 +15,51 @@
   transform: scale(2);
 }
 
-.item {
-  animation: spinAround 3s linear infinite;
+.item1 {
+  animation: spinAround1 8s linear infinite;
   cursor: pointer;
+  width: auto;
+  height: 44px;
+}
+
+.item2 {
+  animation: spinAround2 3s linear infinite;
+  cursor: pointer;
+  width: auto;
+  height: 44px;
 }
 
 .staticItem {
   transform: translate(140px);
 }
 
-@keyframes spinAround {
+@keyframes spinAround1 {
   from {
-    transform: rotate(0deg) translate(44px) scale(2);
+    transform: rotate(0deg) translate(111px) scale(2);
   }
   to {
-    transform: rotate(360deg) translate(44px) scale(2);
+    transform: rotate(360deg) translate(111px) scale(2);
   }
+}
+
+@keyframes spinAround2 {
+  from {
+    transform: rotate(0deg) translate(88px) scale(2);
+  }
+  to {
+    transform: rotate(360deg) translate(88px) scale(2);
+  }
+}
+
+.aboutTitle {
+  font-family: 'Rye', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+.aboutText {
+  color: white;
+}
+
+.aboutDiv {
+  position: absolute;
 }

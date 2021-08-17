@@ -17,6 +17,7 @@ import {
   NewEpisode,
   Invitation,
   EpisodesWorld,
+  AlbumsList,
 } from 'components';
 
 export const App = () => {
@@ -33,6 +34,7 @@ export const App = () => {
           <Route exact path="/invitation" component={Invitation} />
           <Route exact path="/recordings/new" component={Recorder} />
           <Route exact path="/recordings/player/:id" component={Player} />
+          <Route exact path="/albums/all" component={AlbumsList} />
         </Switch>
       </div>
       <Navbar />

@@ -33,8 +33,12 @@ export const NewAlbum = ({ setDisplayNewAlbum }) => {
   };
   const handleSubmit = async e => {
     e.preventDefault();
-    if (!albumInfo.albumImageUrl) return changeImage();
-    if (checkAlbumName(albumInfo.albumName)) {
+    if (
+      albumInfo.albumImageUrl ||
+      window.confirm(
+        'Are you sure you want to upload the album without its cover image?',
+      )
+    ) {
       const config = {
         headers: {
           'Content-Type': 'application/json',
@@ -44,9 +48,7 @@ export const NewAlbum = ({ setDisplayNewAlbum }) => {
       setServerResponse(true);
       setServerResponseMessage(res.data.msg);
     } else {
-      alert(
-        'Please enter the album name in this format: Artist - Album Name [Year of Release]',
-      );
+      return changeImage();
     }
   };
   return (

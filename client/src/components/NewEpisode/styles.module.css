@@ -11,3 +11,8 @@
   padding: 3px 0;
   margin: 3px 0;
 }
+
+.guestImage {
+  width: 200px;
+  height: 200px;
+}

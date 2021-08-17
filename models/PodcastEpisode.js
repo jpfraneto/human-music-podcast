@@ -6,6 +6,9 @@ const PodcastEpisodeSchema = new mongoose.Schema({
   guestCountry: {
     type: String,
   },
+  guestImageUrl: {
+    type: String,
+  },
   guestName: {
     type: String,
   },

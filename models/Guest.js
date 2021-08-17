@@ -13,6 +13,10 @@ const GuestSchema = new mongoose.Schema({
   albumName: {
     type: String,
   },
+  hasImage: {
+    type: Boolean,
+    default: false,
+  },
   albumImageUrl: {
     type: String,
   },

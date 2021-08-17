@@ -3,6 +3,13 @@ const router = express.Router();
 const Guest = require('../../models/Guest');
 const functions = require('../../utils/functions');
 
+router.get('/all', async (req, res) => {
+  const guests = await Guest.find({}).select(
+    'albumOfTheDayStatus albumName guestName albumImageUrl email',
+  );
+  res.json({ albums: guests });
+});
+
 router.post('/', async (req, res) => {
   try {
     const { albumImageUrl, albumName, guestName, email } = req.body;
@@ -12,6 +19,7 @@ router.post('/', async (req, res) => {
       guestName,
       email,
     });
+    if (albumImageUrl) newGuest.hasImage = true;
     newGuest.albumOfTheDayStatus = 'future';
     await newGuest.save();
     res.json({

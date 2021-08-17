@@ -15,7 +15,7 @@ functions.getRandomGuest = async () => {
 };
 
 functions.changePresentAlbum = async () => {
-  const presentAlbum = await Guest.find({
+  const presentAlbum = await Guest.findOne({
     albumOfTheDayStatus: 'present',
   });
   presentAlbum.albumOfTheDayStatus = 'past';

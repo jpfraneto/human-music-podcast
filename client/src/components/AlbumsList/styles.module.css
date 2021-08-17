@@ -1,0 +1,17 @@
+.main {
+  background-color: teal;
+}
+
+.albumDiv {
+  display: inline-block;
+  padding: 8px;
+  border: solid black 2px;
+  text-align: center;
+  margin: 8px;
+}
+
+.albumImage {
+  width: 200px;
+  height: 200px;
+  border: solid black 2px;
+}

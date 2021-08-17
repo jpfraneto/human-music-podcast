@@ -20,3 +20,4 @@ export * from './Invitation';
 export * from './NewAlbum';
 export * from './AlbumDisplay';
 export * from './EpisodesWorld';
+export * from './AlbumsList';

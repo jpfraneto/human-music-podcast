@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
         guestCountry,
         guestName,
         dateRecorded,
+        guestImageUrl,
         language,
       } = req.body;
       const newPodcastEpisode = new PodcastEpisode({
@@ -31,6 +32,7 @@ router.post('/', async (req, res) => {
         guestName,
         dateRecorded,
         language,
+        guestImageUrl,
       });
       newPodcastEpisode.datePublished = new Date();
       await newPodcastEpisode.save();

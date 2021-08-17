@@ -36,10 +36,12 @@ export const AlbumDisplay = () => {
             <figcaption className={styles.todayDate}>
               {today.toUTCString().slice(0, -13)}
             </figcaption>
-            <h3>
+            <h3 className={styles.albumTitle}>
               <strong>{album.albumName} </strong>
             </h3>
-            <small>{album.guestName} </small>
+            <small className={styles.guestNameStyle}>
+              {album.guestName}{' '}
+            </small>
           </div>
         ) : (
           <NewAlbum setDisplayNewAlbum={setDisplayNewAlbum} />
