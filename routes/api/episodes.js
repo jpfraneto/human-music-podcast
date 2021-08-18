@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     if (process.env.NEWEP_PASSWORD === req.body.password) {
+      const guest = await Guest.findById(req.body._id);
       const {
         audioFileUrl,
         guestCountry,
@@ -25,6 +26,7 @@ router.post('/', async (req, res) => {
         dateRecorded,
         guestImageUrl,
         language,
+        description,
       } = req.body;
       const newPodcastEpisode = new PodcastEpisode({
         audioFileUrl,
@@ -33,10 +35,12 @@ router.post('/', async (req, res) => {
         dateRecorded,
         language,
         guestImageUrl,
+        description,
       });
+      newPodcastEpisode.albumImageUrl = guest.albumImageUrl;
+      newPodcastEpisode.albumName = guest.albumName;
       newPodcastEpisode.datePublished = new Date();
       await newPodcastEpisode.save();
-      const guest = await Guest.findById(req.body._id);
       guest.interviewed = true;
       guest.podcast = newPodcastEpisode;
       await guest.save();

@@ -12,6 +12,12 @@ const PodcastEpisodeSchema = new mongoose.Schema({
   guestName: {
     type: String,
   },
+  albumImageUrl: {
+    type: String,
+  },
+  albumName: {
+    type: String,
+  },
   dateRecorded: {
     type: String,
   },
@@ -19,6 +25,9 @@ const PodcastEpisodeSchema = new mongoose.Schema({
     type: String,
   },
   language: {
+    type: String,
+  },
+  description: {
     type: String,
   },
 });

@@ -8,12 +8,18 @@ export const About = () => {
       <div className={styles.aboutText}>
         <p>This project is an exploration into what makes us human.</p>
         <p>
-          There will be a random person from the world into the podcast
-          every week.
+          From all the people that share an album in this page, there will
+          be one selected randomly each week that will be invited to the
+          podcast.
         </p>
-        <p>The randomness of life will choose who it will be.</p>
-        <p>Feel free to write to jpfraneto@gmail.com</p>
-        <p>Let's see what happens from now on.</p>
+        <p>
+          It will be a conversation that will explore the serendipitous
+          encounter of human beings and their life experience.
+        </p>
+        <p>
+          Please write to jpfraneto@gmail.com if you want to get in touch.
+        </p>
+        <p>Let's see how this unravels.</p>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import { Recorder, RecordingElement } from 'components';
 export const Recordings = () => {
   const [loading, setLoading] = useState(true);
   const [recordings, setRecordings] = useState([]);
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [showRecorder, setShowRecorder] = useState(false);
   const [recordingSent, setRecordingSent] = useState(false);
   const [chosenRecording, setChosenRecording] = useState(null);

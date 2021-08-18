@@ -1,23 +1,20 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-export const RecordingElement = ({
-  thisRecording,
-  setChosenRecording,
-  setDisplayPlayer,
+export const EpisodeElement = ({
+  episode,
+  setSelectedEpisode,
   randomCoords,
 }) => {
   return (
-    <li
-      key={thisRecording._id}
+    <img
       onClick={() => {
-        setDisplayPlayer(true);
-        setChosenRecording(thisRecording);
+        setSelectedEpisode(episode);
       }}
+      key={episode._id}
       className={styles.element}
       style={{ top: randomCoords.x, left: randomCoords.y }}
-    >
-      ⭐️
-    </li>
+      src={episode.guestImageUrl}
+    />
   );
 };

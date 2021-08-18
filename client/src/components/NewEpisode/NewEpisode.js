@@ -12,6 +12,7 @@ export const NewEpisode = () => {
     guestName: '',
     dateRecorded: '',
     language: 'Spanish',
+    description: '',
     password: '',
   });
   const [chosenGuest, setChosenGuest] = useState({});
@@ -131,6 +132,18 @@ export const NewEpisode = () => {
                 <option value="English">English</option>
               </select>
               <small> Enter the language of this recording</small>
+            </div>
+            <div className={styles.formelement}>
+              <label>Describe this episode: </label>
+              <br />
+              <textarea
+                type="text"
+                className="form-control"
+                rows="16"
+                cols="44"
+                name="description"
+                onChange={e => onChange(e)}
+              />
             </div>
             <div className={styles.formelement}>
               <input

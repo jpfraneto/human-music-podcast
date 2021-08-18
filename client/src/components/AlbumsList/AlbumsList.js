@@ -8,7 +8,6 @@ export const AlbumsList = () => {
   useEffect(() => {
     const getAlbums = async () => {
       const albums = await axios.get('/api/guests/all');
-      console.log('The albums were retrieved', albums);
       setAlbums(albums.data.albums);
     };
     getAlbums();
@@ -24,15 +23,14 @@ export const AlbumsList = () => {
       <ul>
         {albums &&
           albums.map((album, index) => (
-            <li
-              //   onClick={() => {
-              //     alert(album._id);
-              //   }}
+            <img
+              onClick={() => {
+                setRandomAlbum(album);
+              }}
+              className={styles.albumCover}
               key={index}
-            >
-              {album.albumOfTheDayStatus.toUpperCase()} - {album.albumName}{' '}
-              - <strong>{album.guestName}</strong>
-            </li>
+              src={album.albumImageUrl}
+            />
           ))}
       </ul>
       <button onClick={randomGuest}>Choose Random</button>
