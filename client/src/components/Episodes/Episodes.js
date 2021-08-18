@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import { Episode, NewGuest, EpisodePlayer } from 'components';
+import { NewGuest, EpisodePlayer } from 'components';
 import axios from 'axios';
 
 export const Episodes = () => {
@@ -39,7 +39,6 @@ export const Episodes = () => {
                 </li>
               ))}
           </ul>
-          {chosenEpisode && <Episode episode={chosenEpisode} />}
           <hr />
           <EpisodePlayer />
         </div>
