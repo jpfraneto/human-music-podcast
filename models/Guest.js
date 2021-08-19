@@ -26,6 +26,9 @@ const GuestSchema = new mongoose.Schema({
   albumOfTheDayDate: {
     type: Date,
   },
+  socialMediaLink: {
+    type: String,
+  },
   interviewed: {
     type: Boolean,
     default: false,

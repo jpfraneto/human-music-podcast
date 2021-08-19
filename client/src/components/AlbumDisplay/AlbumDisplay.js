@@ -2,6 +2,7 @@ import { NewAlbum, Spinner } from 'components';
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export const AlbumDisplay = () => {
   const [displayNewAlbum, setDisplayNewAlbum] = useState(false);
@@ -40,7 +41,14 @@ export const AlbumDisplay = () => {
               <strong>{album.albumName} </strong>
             </h3>
             <small className={styles.guestNameStyle}>
-              {album.guestName}{' '}
+              <Link
+                to={{
+                  pathname: `http://www.instagram.com/${album.guestName}`,
+                }}
+                target="_blank"
+              >
+                @{album.guestName}{' '}
+              </Link>
             </small>
           </div>
         ) : (

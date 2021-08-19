@@ -17,6 +17,13 @@ export const Navbar = () => {
         </li>
         <li
           onClick={() => {
+            history.push('/manifesto');
+          }}
+        >
+          Manifesto
+        </li>
+        <li
+          onClick={() => {
             history.push('/recordings');
           }}
         >
@@ -30,13 +37,6 @@ export const Navbar = () => {
           Podcast Episodes
         </li>
 
-        <li
-          onClick={() => {
-            history.push('/about');
-          }}
-        >
-          About
-        </li>
         <li
           onClick={() => {
             window.open(

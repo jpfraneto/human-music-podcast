@@ -15,7 +15,7 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
           }}
           className={styles.closeBtn}
         >
-          ❌ Close{' '}
+          ❌{' '}
         </span>
         <div className={styles.topBox}>
           <div className={styles.audioPlayerWrapper}>
@@ -32,6 +32,11 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
               className={styles.albumImage}
               src={episode.albumImageUrl}
             />
+          </div>
+          <div className={styles.episodeDescription}>
+            <h2>
+              <u>Episode Description</u>
+            </h2>
             <h3 className={styles.albumTitle}>
               <strong>{episode.albumName}</strong>
             </h3>
@@ -42,11 +47,6 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
               <strong>Date recorded: </strong>
               {episode.dateRecorded}
             </p>
-          </div>
-          <div className={styles.episodeDescription}>
-            <h2>
-              <u>Episode Description</u>
-            </h2>
             <ReactMarkdown
               className={styles.descriptionDiv}
               remarkPlugins={[gfm]}
@@ -61,6 +61,3 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
     </div>
   );
 };
-
-// AGREGAR UNA DESCRIPCIÓN DEL EPISODIO Y EL DISPLAY DE ÉSTA!
-// UN TEXTAREA DONDE SE AGREGA LA DESCRIPCIÓN PARA PODER COMPARTIRLA CUANDO COMPARTA EL CAPÍTULO
