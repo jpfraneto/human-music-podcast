@@ -6,13 +6,12 @@
 
 .episodeContainer {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 10px;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 8px auto;
   width: 66%;
-  height: 77%;
+  height: 88%;
   border-radius: 1%;
   border: solid white 2px;
   -webkit-box-shadow: 0 0 33px #fff;
@@ -169,6 +168,10 @@
     width: 100%;
     display: absolute;
     top: 0;
+  }
+
+  .guestImage {
+    width: 22%;
   }
 
   .audioPlayer {

@@ -34,7 +34,7 @@ export const Navbar = () => {
             history.push('/episodes');
           }}
         >
-          Podcast Episodes
+          Episodes
         </li>
 
         <li
