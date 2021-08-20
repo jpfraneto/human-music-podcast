@@ -62,7 +62,7 @@ export const Recorder = ({
           },
         };
         const res = await axios.post('/api/timelessness', body, config);
-        console.log('the res is: ', res.data);
+        res.data.newTimelessness.coords = { x: '222px', y: '222px' };
 
         setData({});
         setLoading(false);

@@ -5,6 +5,7 @@ export const RecordingElement = ({
   thisRecording,
   setChosenRecording,
   setDisplayPlayer,
+  randomCoords,
 }) => {
   const [played, setPlayed] = useState(false);
   return (
@@ -17,8 +18,8 @@ export const RecordingElement = ({
       }}
       className={styles.element}
       style={{
-        top: '222px',
-        left: '222px',
+        top: randomCoords.x,
+        left: randomCoords.y,
       }}
     >
       {played ? (
