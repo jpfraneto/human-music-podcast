@@ -45,12 +45,6 @@ export const About = () => {
           <p>Thank you for being here, thank you for being alive.</p>
           <p>jp</p>
         </div>
-        <div className={styles.jpImages}>
-          <img
-            className={styles.image}
-            src="https://human-music-podcast.s3.us-east-2.amazonaws.com/jpchico.jpg"
-          />
-        </div>
       </div>
     </div>
   );
