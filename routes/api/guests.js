@@ -32,19 +32,22 @@ router.post('/', async (req, res) => {
 
 router.post('/jpalbum', async (req, res) => {
   try {
-    const { albumImageUrl, albumName, guestName, email } = req.body;
-    const newGuest = new Guest({
-      albumImageUrl,
-      albumName,
-      guestName: 'jpfraneto',
-      email: 'jpfraneto@gmail.com',
-    });
-    newGuest.albumOfTheDayStatus = 'future';
-    console.log('The new guest is: ', newGuest);
-    await newGuest.save();
-    res.json({
-      msg: 'Your information was saved. One day you will be in the podcast and we will have a great conversation. Thanks for trusting this space',
-    });
+    console.log('inside the jpalbum route');
+    if (req.body.password === process.env.NEWEP_PASSWORD) {
+      const { albumImageUrl, albumName, guestName, email } = req.body;
+      const newGuest = new Guest({
+        albumImageUrl,
+        albumName,
+        guestName: 'jpfraneto',
+        email: 'jpfraneto@gmail.com',
+      });
+      newGuest.albumOfTheDayStatus = 'future';
+      console.log('The album was saved in the db!');
+      await newGuest.save();
+      res.json({
+        msg: 'Your information was saved. One day you will be in the podcast and we will have a great conversation. Thanks for trusting this space',
+      });
+    }
   } catch (err) {
     console.log(err);
   }
