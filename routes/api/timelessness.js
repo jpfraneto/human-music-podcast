@@ -40,7 +40,7 @@ router.get('/sign-s3', async (req, res) => {
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       signatureVersion: 'v4',
     });
-    const randomId = uuidv4();
+    const randomId = uuidv4() + '.mp3';
     const s3Params = {
       Bucket: S3_BUCKET,
       Key: randomId,

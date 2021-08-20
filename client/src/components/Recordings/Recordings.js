@@ -15,8 +15,12 @@ export const Recordings = () => {
   useEffect(() => {
     const funct = async () => {
       const res = await axios.get('/api/timelessness');
-      console.log('the recordings are: ', res.data);
-      setRecordings(res.data);
+      const recordings = res.data;
+      recordings.forEach(recording => {
+        const coords = generateRandom();
+        recording.coords = coords;
+      });
+      setRecordings(recordings);
       setLoading(false);
     };
     funct();
@@ -84,7 +88,7 @@ export const Recordings = () => {
               recordings.map((recording, index) => (
                 <RecordingElement
                   key={recording._id}
-                  randomCoords={generateRandom()}
+                  randomCoords={recording.coords}
                   thisRecording={recording}
                   setChosenRecording={setChosenRecording}
                   setDisplayPlayer={setDisplayPlayer}

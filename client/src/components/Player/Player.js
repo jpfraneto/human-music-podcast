@@ -7,6 +7,7 @@ export const Player = ({
   setDisplayPlayer,
   loadNextRecording,
 }) => {
+  console.log(recording.recordingUrl);
   return (
     <div className={styles.playerDiv}>
       <p
@@ -25,6 +26,8 @@ export const Player = ({
         <audio
           className={styles.audioElement}
           src={recording.recordingUrl}
+          type="audio/mpeg"
+          preload="none"
           controls
         />
       </div>

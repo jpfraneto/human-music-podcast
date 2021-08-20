@@ -2,12 +2,23 @@
   cursor: pointer;
   color: white;
   position: fixed;
+  font-size: 1.3em;
+  z-index: 9;
   animation: fadeIn 3s;
   -webkit-animation: fadeIn 3s;
   -moz-animation: fadeIn 3s;
   -o-animation: fadeIn 3s;
   -ms-animation: fadeIn 3s;
 }
+
+.playedStar {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

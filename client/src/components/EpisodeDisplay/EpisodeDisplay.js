@@ -21,7 +21,7 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
           <div className={styles.audioPlayerWrapper}>
             <audio
               className={styles.audioPlayer}
-              src="https://rss.art19.com/episodes/82927b43-9dc3-49a7-9651-0582d6784585.mp3?_=1"
+              src="https://human-music-podcast.s3.us-east-2.amazonaws.com/franet.mp3"
               controls
             />
           </div>
@@ -57,7 +57,6 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
           </div>
         </div>
       </div>
-      <PodcastPlayer episode={episode} />
     </div>
   );
 };

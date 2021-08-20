@@ -22,13 +22,7 @@ export const Navbar = () => {
         >
           Manifesto
         </li>
-        <li
-          onClick={() => {
-            history.push('/recordings');
-          }}
-        >
-          Talk to the void
-        </li>
+
         <li
           onClick={() => {
             history.push('/episodes');

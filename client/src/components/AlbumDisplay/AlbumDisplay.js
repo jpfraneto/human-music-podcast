@@ -11,7 +11,7 @@ export const AlbumDisplay = () => {
     albumImageUrl:
       'https://img.discogs.com/UOkoRRp9hPwM-1p1-XpLJIRvPJY=/fit-in/600x604/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-391322-1590457007-2317.jpeg.jpg',
     albumName: 'Pink Floyd - Animals [1977]',
-    guestName: 'JP Franetovic',
+    guestName: 'jpfraneto',
   });
   useEffect(() => {
     const getPresentAlbum = async () => {
