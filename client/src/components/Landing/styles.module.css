@@ -4,6 +4,7 @@
 
 .mainDiv {
   text-align: center;
+  height: 100%;
 }
 
 .mainTitle {
@@ -43,10 +44,18 @@
   color: white;
   font-family: 'Lobster', cursive;
   color: white;
-  margin-bottom: 16px;
   text-shadow: 2px 2px rgb(39, 95, 160);
   font-size: 1.8em;
 }
 .middleDiv p {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainTitle {
+    font-size: 1em;
+  }
+  .subtitle {
+    font-size: 0.7em;
+  }
 }
