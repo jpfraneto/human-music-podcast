@@ -1,0 +1,36 @@
+html {
+  background: url('https://images.unsplash.com/photo-1583504721527-10e254989bbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.title {
+  font-family: 'Monoton', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tuned {
+  font-size: 1.618em;
+  color: rgb(39, 95, 160);
+}
+
+.subtitle {
+  font-size: 0.618em;
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 2px 2px rgb(39, 95, 160);
+}
