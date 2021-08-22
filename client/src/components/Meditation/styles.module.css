@@ -1,7 +1,11 @@
+h1 {
+  margin: 0;
+}
 .main {
   width: 100%;
-  height: 100%;
+  margin: 0;
   padding: 8px;
+  height: 100%;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,
@@ -17,36 +21,26 @@
     rgba(170, 3, 255, 1) 89%
   );
 }
-.header {
-  color: white;
-}
-
-.recordingsList {
-  list-style: none;
-}
-
-.recordingElement {
-  font-size: 1.618em;
-  cursor: pointer;
-  text-decoration: none;
-  z-index: 3;
-}
-
-a {
-  text-decoration: none;
-}
-
-.talk {
-  color: black;
-  cursor: pointer;
-}
-
-.voidTitle {
+.aboutTitle {
   font-family: 'Rye', cursive;
   color: black;
   font-size: 1.618em;
 }
+.containerDiv {
+  display: flex;
+}
 
-.recordingSent {
-  color: yellow;
+.aboutText {
+  float: left;
+  color: white;
+  width: 56%;
+
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.zoomMeeting {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }

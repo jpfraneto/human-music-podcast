@@ -4,6 +4,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
+  padding: 8px;
 }
 
 .main > * {

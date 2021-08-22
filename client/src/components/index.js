@@ -23,3 +23,4 @@ export * from './EpisodesWorld';
 export * from './AlbumsList';
 export * from './EpisodeElement';
 export * from './PodcastPlayer';
+export * from './Meditation';

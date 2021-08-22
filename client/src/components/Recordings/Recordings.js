@@ -49,7 +49,7 @@ export const Recordings = () => {
     setShowRecorder(!showRecorder);
   };
   return (
-    <div>
+    <div className={style.main}>
       <div>
         <h1 className={style.voidTitle}>TALK TO THE VOID</h1>
       </div>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
 import { Link, useHistory } from 'react-router-dom';
+import { isMobile, isSafari } from 'react-device-detect';
 
 export const Navbar = () => {
+  console.log('is mobile', isMobile);
   let history = useHistory();
   const [toggle, setToggle] = useState(false);
   return (
@@ -13,14 +15,14 @@ export const Navbar = () => {
             history.push('/');
           }}
         >
-          Home
+          {isMobile ? '🏠' : 'Home'}
         </li>
         <li
           onClick={() => {
             history.push('/manifesto');
           }}
         >
-          Manifesto
+          {isMobile ? '🗺' : 'Manifesto'}
         </li>
 
         <li
@@ -28,8 +30,18 @@ export const Navbar = () => {
             history.push('/episodes');
           }}
         >
-          Episodes
+          {isMobile ? '🎙' : 'Episodes'}
         </li>
+
+        {!isSafari && (
+          <li
+            onClick={() => {
+              history.push('/recordings');
+            }}
+          >
+            {isMobile ? '📪' : 'Talk to the void'}
+          </li>
+        )}
 
         <li
           onClick={() => {
@@ -39,7 +51,7 @@ export const Navbar = () => {
             );
           }}
         >
-          Radio
+          {isMobile ? '🎵' : 'Radio'}
         </li>
       </ul>
     </div>

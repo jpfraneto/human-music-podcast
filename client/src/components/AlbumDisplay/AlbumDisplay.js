@@ -40,8 +40,9 @@ export const AlbumDisplay = () => {
             <h3 className={styles.albumTitle}>
               <strong>{album.albumName} </strong>
             </h3>
-            <small className={styles.guestNameStyle}>
+            <small>
               <Link
+                className={styles.guestNameStyle}
                 to={{
                   pathname: `http://www.instagram.com/${album.guestName}`,
                 }}
@@ -64,10 +65,23 @@ export const AlbumDisplay = () => {
         {!displayNewAlbum ? 'Add Album Of The Day*' : 'Thank you'}
       </button>
       <br />
-      {displayNewAlbum && (
+      {displayNewAlbum ? (
         <small className={styles.newAlbumMessage}>
-          *Every week I'll choose randombly a person to interview in the
+          * Every week I'll choose randomly a person to interview in the
           podcast from all the ones that have shared albums here.
+        </small>
+      ) : (
+        <small className={styles.newAlbumMessage}>
+          * Every day I will hold the space for listening through the album
+          of the day at 5AM EST on the following{' '}
+          <Link
+            to={{ pathname: 'https://us02web.zoom.us/j/86439135013' }}
+            target="_blank"
+            className={styles.zoomMeeting}
+          >
+            Zoom Room
+          </Link>
+          . The password is 123456, see you in there!
         </small>
       )}
     </div>

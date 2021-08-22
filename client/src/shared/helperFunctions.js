@@ -4,7 +4,7 @@ export const dateFormatting = date => {
   day = day < 10 ? '0' + day : day;
   const year = thisDate.getFullYear();
   const month = romanize(1 + thisDate.getMonth());
-  return day + year + month;
+  return day.toString() + year.toString() + month;
 };
 
 function romanize(num) {

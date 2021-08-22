@@ -39,10 +39,10 @@
 
 @media only screen and (max-width: 600px) {
   .nav {
-    height: 22px;
+    height: 33px;
   }
   .navlist li {
-    margin: 0 8px;
-    font-size: 1em;
+    margin: 0 17px;
+    font-size: 1.3em;
   }
 }

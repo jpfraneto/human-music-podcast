@@ -7,7 +7,6 @@ export const Player = ({
   setDisplayPlayer,
   loadNextRecording,
 }) => {
-  console.log(recording.recordingUrl);
   return (
     <div className={styles.playerDiv}>
       <p
