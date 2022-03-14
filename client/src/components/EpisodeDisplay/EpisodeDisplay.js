@@ -21,7 +21,7 @@ export const EpisodeDisplay = ({ episode, setSelectedEpisode }) => {
           <div className={styles.audioPlayerWrapper}>
             <audio
               className={styles.audioPlayer}
-              src="https://human-music-podcast.s3.us-east-2.amazonaws.com/franet.mp3"
+              src={episode.audioFileUrl}
               controls
             />
           </div>
