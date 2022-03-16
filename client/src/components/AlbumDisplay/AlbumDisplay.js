@@ -65,25 +65,10 @@ export const AlbumDisplay = () => {
         {!displayNewAlbum ? 'Add Album Of The Day*' : 'Thank you'}
       </button>
       <br />
-      {displayNewAlbum ? (
-        <small className={styles.newAlbumMessage}>
-          * Every week I'll choose randomly a person to interview in the
-          podcast from all the ones that have shared albums here.
-        </small>
-      ) : (
-        <small className={styles.newAlbumMessage}>
-          * Every day I will hold the space for listening through the album
-          of the day at 5AM EST on the following{' '}
-          <Link
-            to={{ pathname: 'https://us02web.zoom.us/j/86439135013' }}
-            target="_blank"
-            className={styles.zoomMeeting}
-          >
-            Zoom Room
-          </Link>
-          . The password is 123456, see you in there!
-        </small>
-      )}
+      <small className={styles.newAlbumMessage}>
+        * Every week I'll choose randomly a person to interview in the
+        podcast from all the ones that have shared albums here.
+      </small>
     </div>
   );
 };
