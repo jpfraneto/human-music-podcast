@@ -1,0 +1,38 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color: white;
+}
+
+.recordingsList {
+  list-style: none;
+}
+
+.recordingElement {
+  font-size: 1.618em;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.talk {
+  color: red;
+  cursor: pointer;
+}
+
+.voidTitle {
+  font-family: 'Rye', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+
+.recordingSent {
+  color: greenyellow;
+}

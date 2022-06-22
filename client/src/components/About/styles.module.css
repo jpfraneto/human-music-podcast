@@ -1,0 +1,121 @@
+.main {
+  width: 100%;
+  height: auto;
+}
+
+.containerDiv {
+  display: flex;
+}
+
+.aboutTitle {
+  font-family: 'Rye', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+.aboutText {
+  color: white;
+  width: 56%;
+  height: 444px;
+}
+.jpImages {
+  width: 44%;
+  height: 444px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 333px;
+  height: 333px;
+  border-radius: 50%;
+  background: rgb(44, 234, 255);
+  background: radial-gradient(
+    circle,
+    rgba(44, 234, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 9%,
+    rgba(217, 67, 0, 1) 17%,
+    rgba(1, 0, 217, 1) 26%,
+    rgba(217, 107, 0, 1) 40%,
+    rgba(96, 127, 153, 1) 56%,
+    rgba(153, 96, 114, 1) 75%
+  );
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .containerDiv {
+    display: block;
+    height: 100%;
+  }
+  .aboutText {
+    float: left;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .jpImages {
+    float: left;
+    clear: left;
+    width: 100%;
+    height: 20%;
+  }
+  .image {
+    width: 80%;
+    height: 80%;
+  }
+}

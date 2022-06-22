@@ -1,0 +1,81 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.main > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.theSun {
+  transform: scale(2);
+}
+
+.item1 {
+  animation: spinAround1 8s linear infinite;
+  cursor: pointer;
+  width: auto;
+  height: 44px;
+}
+
+.item2 {
+  animation: spinAround2 3s linear infinite;
+  cursor: pointer;
+  width: auto;
+  height: 44px;
+}
+
+.staticItem {
+  transform: translate(140px);
+}
+
+@keyframes spinAround1 {
+  from {
+    transform: rotate(0deg) translate(111px) scale(2);
+  }
+  to {
+    transform: rotate(360deg) translate(111px) scale(2);
+  }
+}
+
+@keyframes spinAround2 {
+  from {
+    transform: rotate(0deg) translate(88px) scale(2);
+  }
+  to {
+    transform: rotate(360deg) translate(88px) scale(2);
+  }
+}
+
+.aboutTitle {
+  font-family: 'Rye', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+.aboutText {
+  color: white;
+}
+
+.aboutDiv {
+  position: absolute;
+}
+
+.showEpisodeDiv {
+  position: absolute;
+}
+
+.spotifyBtn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: green;
+}
+
+.youtubeBtn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: red;
+}

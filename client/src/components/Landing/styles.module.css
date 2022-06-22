@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.mainDiv {
+  text-align: center;
+  height: 100%;
+}
+
+.mainTitle {
+  font-family: 'Rye', cursive;
+  color: rgb(39, 95, 160);
+  font-size: 1.618em;
+}
+.podcastWord {
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px rgb(39, 95, 160);
+  position: relative;
+  bottom: 0;
+  color: white;
+}
+.podcast {
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 2px 2px rgb(39, 95, 160);
+}
+.subtitle {
+  color: white;
+  display: inline-block;
+}
+
+.topDiv {
+  font-size: 2em;
+  margin-top: 18px;
+}
+
+.topDiv p {
+  margin: 0 auto;
+}
+
+.middleDiv {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 2px 2px rgb(39, 95, 160);
+  font-size: 1.8em;
+}
+.middleDiv p {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainTitle {
+    font-size: 1em;
+  }
+  .subtitle {
+    font-size: 0.7em;
+  }
+}

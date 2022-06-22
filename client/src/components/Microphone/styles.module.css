@@ -1,0 +1,30 @@
+.main {
+  border-radius: 2%;
+}
+
+.recordingBtn {
+  background-color: red;
+  border: 3px solid white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pauseBtn {
+  background-color: white;
+  border: 3px solid blue;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.stopSquare {
+  position: relative;
+  margin: 0 auto;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 8%;
+}

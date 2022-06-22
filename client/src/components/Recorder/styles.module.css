@@ -1,0 +1,27 @@
+.main {
+  border: white 5px solid;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 2px 2px rgb(39, 95, 160);
+  text-align: center;
+  color: white;
+}
+
+.main h1 {
+  margin: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+}
+
+.audioPlayer {
+  width: 100%;
+}
+
+.formStyle {
+  text-align: left;
+}
